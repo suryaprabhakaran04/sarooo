@@ -31,7 +31,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 <jboss-as.deploy.pass>Sooriya@1999</jboss-as.deploy.pass>
 <plugin.war.warName>my-app-1.0-SNAPSHOT</plugin.war.warName>
 <fileNames>
-<fileName>target\my-app-1.0-SNAPSHOT.war</fileName>
+<fileName>C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\surya02\target\my-app-1.0-SNAPSHOT.war</fileName>
 </fileNames>
 </configuration>
 </plugin>
