@@ -45,16 +45,7 @@
                         <artifactId>jboss-as-maven-plugin</artifactId>
                         <version>7.4.Final</version>
                         <executions>
-                            <execution>
-                                <id>undeploy</id>
-                                <phase>clean</phase>
-                                <goals>
-                                    <goal>undeploy</goal>
-                                </goals>
-                                <configuration>
-                                    <ignoreMissingDeployment>true</ignoreMissingDeployment>
-                                </configuration>
-                            </execution>
+                           
                             <execution>
                                 <id>deploy</id>
                                 <phase>install</phase>
