@@ -1,70 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
- 
-
-    <groupId>com.mycompany.app</groupId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>com.mycompany.app</groupId>
 <artifactId>my-app</artifactId>
 <version>1.0-SNAPSHOT</version>
 <packaging>war</packaging>
-
- 
-
-    <name>MVC 1.0 Blank Project (from https://github.com/making/mvc-1.0-blank)</name>
-
- 
-
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-
- 
-
-    <dependencies>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.oracle.ozark</groupId>
-            <artifactId>ozark</artifactId>
-            <version>1.0.0-m01</version>
-        </dependency>
-    </dependencies>
-    <build>
-        <plugins>
-           
-            <plugin>
-                        <groupId>org.jboss.as.plugins</groupId>
-                        <artifactId>jboss-as-maven-plugin</artifactId>
-                        <version>7.4.Final</version>
-                        <executions>
-                           
-                            <execution>
-                                <id>deploy</id>
-                                <phase>install</phase>
-                                <goals>
-                                    <goal>deploy</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            
-                            <hostname>localhost</hostname>
-                            <username>admin</username>
-                            <password>Sooriya@1999</password>
-                            <port>9999</port>
-                        </configuration>
-                    </plugin>
-
- 
-
-        </plugins>
-    </build>
+<properties>
+<maven.compiler.source>1.7</maven.compiler.source>
+<maven.compiler.target>1.7</maven.compiler.target>
+</properties>
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-war-plugin</artifactId>
+<version>2.6</version>
+<configuration>
+<failOnMissingWebXml>false</failOnMissingWebXml>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.jboss.as.plugins</groupId>
+<artifactId>jboss-as-maven-plugin</artifactId>
+<version>7.9.Final</version>
+<configuration>
+<force>true</force>
+<jboss-as.deploy.hostname>localhost</jboss-as.deploy.hostname> <!-- Where to deploy. -->
+<jboss-as.deploy.port>9999</jboss-as.deploy.port>
+<jboss-as.deploy.user>admin</jboss-as.deploy.user>
+<jboss-as.deploy.pass>Sooriya@1999</jboss-as.deploy.pass>
+<plugin.war.warName>my-app-1.0-SNAPSHOT</plugin.war.warName>
+<fileNames>
+<fileName>C:\Users\sarav\.jenkins\workspace\tenet 2\target\my-app-1.0-SNAPSHOT.war</fileName>
+</fileNames>
+</configuration>
+</plugin>
+</plugins>
+</build>
+<dependencies>
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.12</version>
+<scope>test</scope>
+</dependency>
+</dependencies>
 </project>
