@@ -1,26 +1,16 @@
 pipeline {
     agent any
-
-    stages {
-        stage ('SP') {
-
-            steps {
-               echo 'surya'
+stages {
+    stage('Deploy') {
+        when { 
+            expression {
+                return Deploy
             }
         }
+        steps {
+            echo "Hello, bitwiseman!"
 
-        stage ('SP1') {
-
-            steps {
-               echo 'prabhakaran'
-            }
-        }
-
-
-        stage ('SP2') {
-            steps {
-                echo 's2345'
-            }
         }
     }
 }
+   
