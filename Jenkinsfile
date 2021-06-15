@@ -2,30 +2,24 @@ pipeline {
     agent any
 
     stages {
-        stage ('Compile Stage') {
+        stage ('SP') {
 
             steps {
-                withMaven(maven : 'sp') {
-                    sh 'mvn clean compile'
-                }
+               echo 'surya'
             }
         }
 
-        stage ('Testing Stage') {
+        stage ('SP1') {
 
             steps {
-                withMaven(maven : 'sp') {
-                    sh 'mvn test'
-                }
+               echo 'prabhakaran'
             }
         }
 
 
-        stage ('Deployment Stage') {
+        stage ('SP2') {
             steps {
-                withMaven(maven : 'sp') {
-                    sh 'mvn deploy'
-                }
+                echo 's2345'
             }
         }
     }
